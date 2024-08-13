@@ -1,6 +1,11 @@
-<nav>
+
+  <nav>
     <ul>
-      <li><a href="{{ url_for('home.home') }}">Home</a></li>
+      <li><strong><a href="{{ url_for('home.home') }}">Acme Corp</a></strong></li>
+    </ul>
+    <ul>
+      <li><a href="{{ url_for('partners.partners') }}">Partners</a></li>
+      <li><a href="#">Offers</a></li>
       <li><a href="{{ url_for('home.about') }}">About</a></li>
     </ul>
   </nav>
