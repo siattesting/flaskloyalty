@@ -10,13 +10,13 @@
   <title>Message Board - {% block title %}{% endblock title %}</title>
 </head>
 <body>
-  <main class="container">
+  <main class="container" id="main">
     {% include("_navigation.html") %}
     <section>
-      <header>
+      <header id="header">
         {% block header %}{% endblock header %}
       </header>
-      <main>
+      <main id="main-content">
         {% block content %}<p>No messages.</p>{% endblock content %}
       </main>
     </section>
