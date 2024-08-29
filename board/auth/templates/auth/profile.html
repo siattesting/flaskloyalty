@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Profile{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <h2>Profile page</h2>
+  <div>
+    {% if g.user %}
+      <li><span>{{ g.user['username'] }}</span>
+    <p>Username: {{ g.user['username'] }}</p>
+    <p>Email: {{ g.user['email'] }}</p>
+    <p>Registration date: {{ g.user['created_at'] }}</p>
+    {% else %}
+    <p>Access restricted</p>
+    <p>Please <a href="{{ url_for(auth.login) }}">Login</a></p>
+    {% endif %}
+  </div>
+{% endblock %}

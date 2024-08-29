@@ -6,8 +6,8 @@ bp = Blueprint('partners', __name__, template_folder='templates')
 def partners():
     search = request.args.get('q')
     if search is not None:
-        partners_set = Partner.search(search)
+        partners_set = []
     else:
-        partners_set = Partner.query.all()
+        partners_set = []
     return render_template("partners/partners.html", partners=partners_set)
 
