@@ -5,17 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-  <p>Already have an account? <a href="{{ url_for('auth.login') }}">Log In</a></p>
-  <p>Or, create a new account.</p>
-  <hr>
-  <p>By clicking "Register", you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
-  <hr>
-  <p>Please note that this is a basic registration form. For a more secure and user-friendly experience, consider using a third-party service.</p>
-  <p>For example, you could use <a href="https://www.signuppage.com/">SignupPage.com</a> or <a href="https://www.gravatar.com/">Gravatar</a>.</p>
-  <hr>
-  <p>Also, please be aware that this platform may not be totally ready. Work in progress!
-</div>
+
   <form method="post">
     <label for="username">Username</label>
     <input name="username" id="username" required>
@@ -23,4 +13,17 @@
     <input type="password" name="password" id="password" required>
     <input type="submit" value="Register">
   </form>
+
+  <hr />
+  <div class="container">
+    <p>Already have an account? <a href="{{ url_for('auth.login') }}">Log In</a></p>
+    <p>Or, create a new account.</p>
+    <hr>
+    <p>By clicking "Register", you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+    <hr>
+    <p>Please note that this is a basic registration form. For a more secure and user-friendly experience, consider using a third-party service.</p>
+    <p>For example, you could use <a href="https://www.signuppage.com/">SignupPage.com</a> or <a href="https://www.gravatar.com/">Gravatar</a>.</p>
+    <hr>
+    <p>Also, please be aware that this platform may not be totally ready. Work in progress!
+  </div>
 {% endblock %}
